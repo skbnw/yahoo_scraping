@@ -1,0 +1,13 @@
+terminal_crontab -e(-l表示、:wq終了）
+
+crontab -l
+
+※パスは、AnacondaからPYTHON起動（ライブラリー基礎設定のため）
+
+PATH=/Users/skbnw/.pyenv/shims:/Users/skbnw/.pyenv/bin:/Users/skbnw/opt/anaconda3/bin:/Users/skbnw/opt/anaconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+※命令実行頻度を確立するため
+
+# (分)　(時)　(日)　(月)　(曜日) 　(実行するコマンド)
+*/1 * * * * python /Users/skbnw/Documents/Python-cron/Yahoo_RSS_2021-03-28.py >> /Users/skbnw/Documents/Python-cron/cron.log 2>&1
+(base) skbnw@esunoMBP ~ % 
