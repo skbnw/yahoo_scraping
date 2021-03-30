@@ -1,13 +1,13 @@
-terminal_crontab -e(-l•\Ž¦A:wqI—¹j
+terminal_crontab -e(-lè¡¨ç¤ºã€:wqçµ‚äº†ï¼‰
 
 crontab -l
 
-¦ƒpƒX‚ÍAAnaconda‚©‚çPYTHON‹N“®iƒ‰ƒCƒuƒ‰ƒŠ[Šî‘bÝ’è‚Ì‚½‚ßj
+â€»ãƒ‘ã‚¹ã¯ã€Anacondaã‹ã‚‰PYTHONèµ·å‹•ï¼ˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒ¼åŸºç¤Žè¨­å®šã®ãŸã‚ï¼‰
 
-PATH=/Users/skbnw/.pyenv/shims:/Users/skbnw/.pyenv/bin:/Users/skbnw/opt/anaconda3/bin:/Users/skbnw/opt/anaconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PATH=/Users/******
 
-¦–½—ßŽÀs•p“x‚ðŠm—§‚·‚é‚½‚ß
+â€»å‘½ä»¤å®Ÿè¡Œé »åº¦ã‚’ç¢ºç«‹ã™ã‚‹ãŸã‚
 
-# (•ª)@(Žž)@(“ú)@(ŒŽ)@(—j“ú) @(ŽÀs‚·‚éƒRƒ}ƒ“ƒh)
+# (åˆ†)ã€€(æ™‚)ã€€(æ—¥)ã€€(æœˆ)ã€€(æ›œæ—¥) ã€€(å®Ÿè¡Œã™ã‚‹ã‚³ãƒžãƒ³ãƒ‰)
 */1 * * * * python /Users/skbnw/Documents/Python-cron/Yahoo_RSS_2021-03-28.py >> /Users/skbnw/Documents/Python-cron/cron.log 2>&1
 (base) skbnw@esunoMBP ~ % 
