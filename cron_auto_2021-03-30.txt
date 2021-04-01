@@ -2,11 +2,11 @@ terminal_crontab -e(-l表示、:wq終了）
 
 crontab -l
 
-※パスは、AnacondaからPYTHON起動（ライブラリー基礎設定のため）
+※パスは、AnacondaからPYTHON起動する設定に変更。（Mac内のPYTHONではライブラリー設定等必要なため）
 
 PATH=/Users/******
 
-※命令実行頻度を確立するため
+※命令実行頻度を設定します。下記は、「*/1」で1分毎に設定
 
 # (分)　(時)　(日)　(月)　(曜日) 　(実行するコマンド)
 */1 * * * * python /Users/skbnw/Documents/Python-cron/Yahoo_RSS_2021-03-28.py >> /Users/skbnw/Documents/Python-cron/cron.log 2>&1
