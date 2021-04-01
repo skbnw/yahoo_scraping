@@ -1,17 +1,19 @@
-#Yahoo_RSS_Media 見出しスクレイピング 2021-04-01現在
-#対象約600サイト、所要10分程度、1・5Ｍ
+#Yahoo_RSS_Media 見出しスクレイピング
 
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import csv
 
-df = pd.read_csv('/Users/skbnw/Documents/Python-cron/yahoo_rss_all_list_2021_04_01.csv')
+#ヤフー出稿メディア別のページ一覧を読み込み
+df = pd.read_csv('yahoo_rss_all_list_2021_04_01.csv')
 
-with open("/Users/skbnw/Documents/Python-cron/yahoo_rss_all_media.csv", mode="a", encoding="utf_8_sig", newline='') as f:
+#保存先ファイルを開き、列を作成
+with open("***.csv", mode="a", encoding="utf_8_sig", newline='') as f:
   writer = csv.DictWriter(f, ['Media', 'Title', 'Pubdate', 'Link'])
   writer.writeheader()
- 
+  
+#スクレイピングの設定
   for index, row in df.iterrows():
     url = row['url']
     html = requests.get( url )
@@ -23,8 +25,6 @@ with open("/Users/skbnw/Documents/Python-cron/yahoo_rss_all_media.csv", mode="a"
       d["Title"] = news.select_one('.newsFeed_item_title').text
       d["Pubdate"] = news.select_one('.newsFeed_item_date').text
       d["Link"] = news.a['href']
-      # d["Link"] = news.select_one('.newsFeed_item_link').text
-      # # #d["Description"]  = "" if news.description == None else news.description.string
       writer.writerow(d)
     
  
