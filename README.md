@@ -1,4 +1,4 @@
-# yahoo_scraping
+# yahoo_scraping　2021-03-31更新
 
 ヤフージャパンのニュースRSSからニュース見出しなどを自動スクレイピングするコードです。
 https://news.yahoo.co.jp/rss
