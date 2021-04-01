@@ -1,0 +1,31 @@
+#Yahoo_RSS_Media 見出しスクレイピング 2021-04-01現在
+#対象約600サイト、所要10分程度、1・5Ｍ
+
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
+import csv
+
+df = pd.read_csv('/Users/skbnw/Documents/Python-cron/yahoo_rss_all_list_2021_04_01.csv')
+
+with open("/Users/skbnw/Documents/Python-cron/yahoo_rss_all_media.csv", mode="a", encoding="utf_8_sig", newline='') as f:
+  writer = csv.DictWriter(f, ['Media', 'Title', 'Pubdate', 'Link'])
+  writer.writeheader()
+ 
+  for index, row in df.iterrows():
+    url = row['url']
+    html = requests.get( url )
+    soup = BeautifulSoup(html.text, 'html.parser' )
+
+    for news in soup.find_all(class_='newsFeed_item'):
+      d = {}
+      d["Media"]  = row['media_online']
+      d["Title"] = news.select_one('.newsFeed_item_title').text
+      d["Pubdate"] = news.select_one('.newsFeed_item_date').text
+      d["Link"] = news.a['href']
+      # d["Link"] = news.select_one('.newsFeed_item_link').text
+      # # #d["Description"]  = "" if news.description == None else news.description.string
+      writer.writerow(d)
+    
+ 
+
