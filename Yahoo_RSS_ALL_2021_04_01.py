@@ -1,4 +1,4 @@
-#Yahoo_RSS_Media 見出しスクレイピング
+#Yahoo_RSS_Media 見出しスクレイピング(html)
 
 import pandas as pd
 import requests
