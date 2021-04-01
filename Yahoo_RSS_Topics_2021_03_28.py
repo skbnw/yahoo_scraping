@@ -8,7 +8,7 @@ from datetime import datetime
 xml = requests.get("https://news.yahoo.co.jp/rss/topics/top-picks.xml")
 soup =  BeautifulSoup(xml.text, 'xml')
 
-with open("/Users/skbnw/Documents/Python-cron/yahoo_rss_topics.csv", mode="a", encoding="utf_8_sig",newline="") as f:
+with open("****.csv", mode="a", encoding="utf_8_sig",newline="") as f:
   writer = csv.DictWriter(f, ['Category','Title', 'Link','PubDate','Description'])
   writer.writeheader()
 
