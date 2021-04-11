@@ -1,4 +1,4 @@
-# yahoo_scraping　2021-04-02更新
+# yahoo_scraping　2021-04-１１更新
 
 ヤフージャパンのニュースやアクセスランキングをスクレイピングするコードです。
 https://news.yahoo.co.jp/rss
@@ -12,3 +12,5 @@ https://news.yahoo.co.jp/ranking/access/news
 「アクセスランキング」から抽出するコード(html) 　Yahoo_Ranking.ipynb　（参照　yahoo_ranking_url.csv)
  
 自動実行のcron 設定 cron_auto
+
+2021-04-11更新　ヤフー特有の日時表記を、datetime形式に変更するなどしました。
