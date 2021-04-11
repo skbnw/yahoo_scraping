@@ -21,10 +21,10 @@ def dateString2Datetime(_string):
     return datetime.strptime("2021/" + cleaned_string, "%Y/%m/%d %H:%M")
 
 # #ヤフー出稿メディア別のページ一覧を読み込み
-df = pd.read_csv('/Users/skbnw/Documents/Python-cron/yahoo_ranking_url.csv')
+df = pd.read_csv('***/yahoo_ranking_url.csv')
 
 #保存先ファイルを開き、列を作成
-with open("/Users/skbnw/Documents/Python-cron/yahoo_ranking.csv", mode="a", encoding="utf_8_sig", newline='') as f:
+with open("***/yahoo_ranking.csv", mode="a", encoding="utf_8_sig", newline='') as f:
   writer = csv.DictWriter(f, ['date_rank', 'category',
                               'rankNum', 'title', 'media', 'pubdate', 'link'])
   writer.writeheader()
