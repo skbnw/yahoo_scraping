@@ -27,10 +27,10 @@ def getPosNumber(_string):
   return int(first_cadidate.split(":")[1])
 
 #ヤフー出稿メディア別のページ一覧を読み込み
-df = pd.read_csv('/Users/skbnw/Documents/Python-cron/yahoo_rss_all_list_2021_04_01.csv')
+df = pd.read_csv('yahoo_rss_all_list_2021_04_01.csv')
 
 #保存先ファイルを開き
-fout = open("/Users/skbnw/Documents/Python-cron/yahoo_rss_all_media.csv",mode="a", encoding="utf_8_sig", newline='')
+fout = open("yahoo_rss_all_media.csv",mode="a", encoding="utf_8_sig", newline='')
 # 列を決め、列名を書き出す
 writer = csv.DictWriter(fout, ['Media', 'Title', 'Pubdate', 'Link', 'Pos'])
 writer.writeheader()
